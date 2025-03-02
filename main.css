@@ -1,0 +1,615 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Logo and Clinic Name */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.clinic-name {
+    font-weight: bold;
+    color: #6c757d;
+    font-size: 18px;
+}
+
+.highlight {
+    color: #739FA6;
+}
+
+/* Info Section */
+.info-container {
+    display: flex;
+    gap: 20px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid gray;
+    padding-right: 20px;
+}
+
+.info-box:last-child {
+    border-right: none;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #739FA6;
+    margin-right: 8px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtext {
+    color: gray;
+    font-size: 14px;
+}
+
+/* Pharmacy Logo */
+.pharmacy-logo {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Slider styling */
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Each slide */
+.slide {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+/* Overlay for text */
+.text-overlay {
+  position: relative;
+  left: 70px;
+  color: white;
+  top: 198px;
+  background-color: #739FA6;
+  padding: 20px;
+  max-width: 70%;
+  border-radius: 10px;
+}
+
+.text-overlay h2 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.text-overlay p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+
+.slider-container {
+  overflow: hidden; /* Ensures only the visible slide is shown */
+  width: 100%; /* Ensures it does not exceed the screen width */
+  position: relative; /* Needed for absolute positioning of buttons */
+}
+
+/* Optional: Navigation buttons */
+.slider-container .prev, .slider-container .next {
+  position: absolute;
+  top: 250px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  font-size: 30px;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.slider-container .prev {
+  left: 10px;
+}
+
+.slider-container .next {
+  right: 10px;
+}
+
+/* Section Styling */
+.about-hospital {
+  background-color: #f9f9f9;
+  padding: 80px 10%;
+}
+
+/* Layout: Image Left, Text Right */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Image Styling */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hospital-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.text-content {
+  flex: 1;
+  color: #333;
+}
+
+.text-content h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+
+/* Section Styling */
+.capacity-section {
+  background-color: #fff;
+  padding: 80px 10%;
+}
+
+/* Layout: Text Left, Image Right */
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Text Styling */
+.text-content {
+  flex: 1;
+  color: #333;
+}
+
+.text-content h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text-content h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.text-content p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Image Styling */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image-container-first{
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.hospital-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-info {
+  padding: 40px 10%;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 180px; /* Ensures all items have the same height */
+}
+
+.contact-item img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.contact-item h3 {
+  font-size: 18px;
+  color: #739FA6;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-item p {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+
+/* Public Info Section */
+.public-info {
+  background-color: #fff;
+  padding: 30px 10%;
+  font-family: Arial, sans-serif;
+}
+
+.public-info h2 {
+  font-size: 22px;
+  color: #333;
+  font-weight: bold;
+}
+
+.public-info .highlight {
+  font-size: 18px;
+  color: #739FA6;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.info-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.public-info h3 {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+}
+
+.public-info p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+
+
+
+/* Doctors Section */
+.doctors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  text-align: center;
+  padding: 40px 10%;
+}
+
+.doctorsHeadline{
+  font-weight: bold;
+  text-align: center;
+}
+
+.doctorsMainDiv{
+  margin-top: 50px;
+}
+
+.doctor {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.doctor:hover {
+  transform: scale(1.05);
+}
+
+.doctor img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.doctor h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.doctor p {
+  font-size: 14px;
+  color: #666;
+}
+
+.appointment-form {
+  max-width: 600px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+.appointment-form h1 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.appointment-form p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.appointment-form label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.appointment-form input, .appointment-form select, .appointment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.appointment-form textarea {
+  resize: vertical;
+}
+
+.submit-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+.article-section {
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+  text-align: left;
+}
+.article-section h1 {
+  font-weight: bold;
+  text-align: center;
+}
+.article-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 15px 0;
+  display: block;
+}
+.article-section ul {
+  padding-left: 20px;
+}
+.article-section li {
+  margin-bottom: 10px;
+}
+
+.articles-smaller-headings{
+  text-align: center;
+  color: #739FA6;
+  margin-top: 20px;
+}
+
+
+.footer {
+  background-color: #739FA6;
+  color: #fff;
+  padding: 20px;
+  text-align: left;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  max-width: 150px;
+}
+
+.description {
+  margin-top: 70px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: orange;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: orange;
+}
+
+
+.navbar {
+  top: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+  color: #739FA6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-container {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  .contact-item {
+      max-width: 45%;
+      margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-item {
+      max-width: 100%;
+  }
+}
+
+
+/* Responsive for Smaller Screens */
+@media (max-width: 900px) {
+  .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .image-container {
+      justify-content: center;
+  }
+
+  .hospital-img {
+      max-width: 80%;
+  }
+}
+
+
+/* Responsive for Smaller Screens */
+@media (max-width: 900px) {
+  .content-wrapper {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .image-container {
+      justify-content: center;
+  }
+
+  .hospital-img {
+      max-width: 80%;
+  }
+}
+
