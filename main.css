@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #fff;
@@ -546,70 +550,5 @@ body {
 
 .navbar ul li a:hover {
   color: #739FA6;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .contact-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .contact-container {
-      flex-wrap: wrap;
-      justify-content: center;
-  }
-  .contact-item {
-      max-width: 45%;
-      margin-bottom: 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  .contact-item {
-      max-width: 100%;
-  }
-}
-
-
-/* Responsive for Smaller Screens */
-@media (max-width: 900px) {
-  .content-wrapper {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .image-container {
-      justify-content: center;
-  }
-
-  .hospital-img {
-      max-width: 80%;
-  }
-}
-
-
-/* Responsive for Smaller Screens */
-@media (max-width: 900px) {
-  .content-wrapper {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .image-container {
-      justify-content: center;
-  }
-
-  .hospital-img {
-      max-width: 80%;
-  }
 }
 
